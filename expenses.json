@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "uid": "exp_1775254300322_fr8iodu",
+    "scope": "personal",
+    "title": "1 bote de agua 34",
+    "description": "-",
+    "quantity": null,
+    "unitCost": null,
+    "total": 34,
+    "purchaseDate": "2026-04-03",
+    "createdAt": "2026-04-03T22:11:40.322Z",
+    "updatedAt": "2026-04-03T22:11:40.322Z",
+    "notes": "",
+    "images": [],
+    "quickMode": true
+  },
+  {
+    "uid": "exp_1775254272225_8g5ihaf",
+    "scope": "personal",
+    "title": "5 bolsas de frijoles",
+    "description": "bolsas de frijoles",
+    "quantity": 5,
+    "unitCost": 20,
+    "total": 100,
+    "purchaseDate": "2026-04-03",
+    "createdAt": "2026-04-03T22:11:12.224Z",
+    "updatedAt": "2026-04-03T22:11:12.225Z",
+    "notes": "en la pulperia HR",
+    "images": [],
+    "quickMode": false
+  }
+]
