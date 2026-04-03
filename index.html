@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Gastos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Resumen personal y comercial</p>
+        <h1>Control de gastos</h1>
+        <p class="hero-text">Visualiza cuánto gastaste por mes, separando <strong>Personal</strong> y <strong>Negocios</strong>, con historial completo, fecha de compra, fecha de registro y marca de edición.</p>
+      </div>
+      <div class="hero-glow"></div>
+    </header>
+
+    <section class="panel filters-panel">
+      <div class="panel-title-row">
+        <div>
+          <p class="section-kicker">Filtros</p>
+          <h2>Filtrar resumen y movimientos</h2>
+        </div>
+        <button id="reload-data" class="btn ghost" type="button">Recargar datos</button>
+      </div>
+
+      <div class="filters-grid">
+        <label>
+          <span>Mes</span>
+          <select id="month-filter"></select>
+        </label>
+
+        <label>
+          <span>Tipo</span>
+          <select id="scope-filter">
+            <option value="todos">Todos</option>
+            <option value="personal">Personal</option>
+            <option value="negocio">Negocios</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Buscar</span>
+          <input id="search-filter" type="search" placeholder="Descripción, tienda, nota...">
+        </label>
+      </div>
+    </section>
+
+    <section class="summary-grid" id="summary-grid">
+      <article class="summary-card personal">
+        <p>Total del mes</p>
+        <h3 id="summary-personal">L 0.00</h3>
+        <span>Gastado (Personal)</span>
+      </article>
+      <article class="summary-card negocio">
+        <p>Total del mes</p>
+        <h3 id="summary-negocio">L 0.00</h3>
+        <span>Gastado (Negocios)</span>
+      </article>
+      <article class="summary-card ambos">
+        <p>Total del mes</p>
+        <h3 id="summary-total">L 0.00</h3>
+        <span>Ambos</span>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title-row compact-bottom">
+        <div>
+          <p class="section-kicker">Mes seleccionado</p>
+          <h2 id="selected-month-title">Resumen del mes</h2>
+        </div>
+        <div class="pill neutral" id="selected-month-count">0 movimientos</div>
+      </div>
+
+      <div id="month-breakdown" class="month-breakdown"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title-row compact-bottom">
+        <div>
+          <p class="section-kicker">Histórico</p>
+          <h2>Resumen por todos los meses</h2>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Mes</th>
+              <th>Personal</th>
+              <th>Negocios</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="monthly-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title-row compact-bottom">
+        <div>
+          <p class="section-kicker">Detalle</p>
+          <h2>Movimientos registrados</h2>
+        </div>
+      </div>
+      <div id="expenses-list" class="expenses-list"></div>
+    </section>
+  </div>
+
+  <template id="receipt-modal-template">
+    <div class="modal-backdrop hidden" id="receipt-modal">
+      <div class="modal-card">
+        <button class="modal-close" id="close-receipt-modal" type="button">×</button>
+        <img id="receipt-modal-image" src="" alt="Factura ampliada">
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
