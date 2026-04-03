@@ -1,5 +1,20 @@
 [
   {
+    "uid": "exp_1775254475647_g2kp5ss",
+    "scope": "negocio",
+    "title": "1 bypass pc",
+    "description": "a gesied",
+    "quantity": 1,
+    "unitCost": 800,
+    "total": 800,
+    "purchaseDate": "2026-04-03",
+    "createdAt": "2026-04-03T22:14:35.646Z",
+    "updatedAt": "2026-04-03T22:14:35.647Z",
+    "notes": "",
+    "images": [],
+    "quickMode": false
+  },
+  {
     "uid": "exp_1775254300322_fr8iodu",
     "scope": "personal",
     "title": "1 bote de agua 34",
